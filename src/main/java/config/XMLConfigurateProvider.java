@@ -1,8 +1,6 @@
 package config;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -20,8 +18,10 @@ public class XMLConfigurateProvider {
             Document document = documentBuilder.parse(file);
             NodeList nodeList = document.getElementsByTagName("connection");
             Element element = (Element)nodeList.item(0);
-            //System.out.println(String.valueOf(element.getElementsByTagName(name).item(0).getAttributes().getNamedItem("value")));
-             return String.valueOf(element.getElementsByTagName(name).item(0).getAttributes().getNamedItem("value"));
+
+            Node item = element.getElementsByTagName(name).item(0);
+            Attr value = (Attr)item.getAttributes().getNamedItem("value");
+            return value.getValue();
 
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
