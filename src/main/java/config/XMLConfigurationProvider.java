@@ -2,14 +2,13 @@ package config;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 
-public class XMLConfigurateProvider {
+public class XMLConfigurationProvider {
     public String getValue(String name,String filename) throws IOException, SAXException {
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource(filename).getPath());
@@ -30,6 +29,3 @@ public class XMLConfigurateProvider {
             //Parser->keyName->return value
         }
 }
-//test XMLConfigurateProvider.getValue("key");
-//test XMLConfigurateProvider.getValue("url");
-//in dependenta de metoda Parsing aleasa posibil vamai trebui de adaugat inca un parametru la metoa: String fileName

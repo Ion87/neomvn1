@@ -1,5 +1,5 @@
 package tests;
-import config.XMLConfigurateProvider;
+import config.XMLConfigurationProvider;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.xml.sax.SAXException;
@@ -11,15 +11,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class NasaProviderTest {
-//    ClassLoader classLoader = getClass().getClassLoader();
-//    File file = new File(classLoader.getResource("nasa.xml").getPath());
     @Test
     public void testURL() throws Exception {
-       // XMLConfigurateProvider configurateProvider = new XMLConfigurateProvider();
-       // String strUrl = configurateProvider.getValue("url","nasa.xml");
-        //String demoKey = configurateProvider.getValue("key","nasa.xml");
         try {
-            //URL oracle = new URL(strUrl+"?start_date=2020-03-03&end_date=2020-03-03"+"&api_key="+demoKey);
             URL url = new URL("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=DEMO_KEY");
             HttpURLConnection urlConn = (HttpURLConnection) url.openConnection();
             urlConn.connect();
@@ -32,9 +26,9 @@ public class NasaProviderTest {
     }
     @Test
     void testConnection() throws IOException, SAXException {
-        XMLConfigurateProvider configurateProvider = new XMLConfigurateProvider();
-        String url = configurateProvider.getValue("url","nasa.xml");
-        String demoKey = configurateProvider.getValue("key","nasa.xml");
+        XMLConfigurationProvider configurationProvider = new XMLConfigurationProvider();
+        String url = configurationProvider.getValue("url","nasa.xml");
+        String demoKey = configurationProvider.getValue("key","nasa.xml");
         //Connection
         URL oracle = new URL(url+"?start_date=2020-03-03&end_date=2020-03-03"+"&api_key="+demoKey);
         BufferedReader in = new BufferedReader(new InputStreamReader(oracle.openStream()));
