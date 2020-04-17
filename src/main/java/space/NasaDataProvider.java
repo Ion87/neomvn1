@@ -1,7 +1,7 @@
 package space;
 
+import controllers.MainController;
 import org.json.JSONObject;
-import space.Asteroid;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,7 +18,7 @@ public class NasaDataProvider {
     private final static Calendar calendarEnd = Calendar.getInstance();
     private final static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-    public void getNeoAsteroids(String startDate, String endDate) throws Exception {
+    public List<Asteroid> getNeoAsteroids(String startDate, String endDate) throws Exception {
 
             //1.Connect to nasa API
             URL oracle = new URL(Neo_ENDPOINT + "?start_date=" + startDate + "&end_date=" + endDate + "&api_key=" + Access_Key);
@@ -68,6 +68,8 @@ public class NasaDataProvider {
             calendarStart.add(Calendar.DATE, 1);
             startDate = dateFormat.format(calendarStart.getTime());
         }while (!startDate.equals(endDate));
-        asteroidsList.forEach(System.out::println);
+        asteroidsList.forEach(System.out::print);
+        return asteroidsList;
     }
+
 }

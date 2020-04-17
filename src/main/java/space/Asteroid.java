@@ -52,10 +52,10 @@ public class Asteroid {
     @Override
     public String toString() {
         return "Asteroid{" +
-                "nameId='" + nameId + '\'' +
+                "Id='" + nameId + '\'' +
                 ", diameter=" + diameter +
                 ", distanceKm=" + distanceKm +
                 ", danger=" + danger +
-                "}";
+                "}\n";
     }
 }
