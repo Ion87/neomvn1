@@ -20,6 +20,7 @@ public class GUIApplication extends Application{
         loader.setLocation(url);
         Parent root = loader.load();
         stage.setScene(new Scene(root));
+        stage.setTitle("Asteroid's data from Nasa");
         stage.show();
     }
 
