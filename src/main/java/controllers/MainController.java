@@ -19,5 +19,7 @@ public class MainController {
     @FXML public void getData() throws Exception {
         List<Asteroid> asteroids =new NasaDataProvider().getNeoAsteroids(startDateInput.getText(),endDateInput.getText());
         asteroids.forEach(var->textArea.appendText(var.toString()));
+        startDateInput.clear();
+        endDateInput.clear();
     }
 }

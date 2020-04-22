@@ -7,18 +7,25 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox fx:controller="controllers.MainController" prefHeight="409.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="378.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="398.0" prefWidth="438.0" VBox.vgrow="ALWAYS">
+    <AnchorPane cache="true" maxHeight="-1.0" maxWidth="-1.0" prefHeight="380.0" prefWidth="550.0" style="-fx-background-color: #87cefa;" VBox.vgrow="ALWAYS">
       <children>
-            <ButtonBar layoutX="140.0" layoutY="357.0" prefHeight="40.0" prefWidth="122.0" >
-            <buttons>
-          <Button onAction="#getData" layoutX="118.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="GET DATA" />
-            </buttons></ButtonBar>
-          <TextField fx:id="startDateInput" layoutX="14.0" layoutY="321.0" prefHeight="25.0" prefWidth="175.0" promptText="start date: YYYY-MM-DD"  AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="249.0" AnchorPane.topAnchor="321.0"/>
-          <TextField fx:id="endDateInput" layoutX="238.0" layoutY="321.0" prefHeight="25.0" prefWidth="186.0" promptText="end date: YYYY-MM-DD" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="321.0" />
-          <TextArea fx:id="textArea" layoutX="21.0" layoutY="14.0" prefHeight="298.0" prefWidth="399.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+            <ButtonBar layoutX="414.0" layoutY="325.0" prefHeight="40.0" prefWidth="122.0">
+               <buttons>
+          <Button mnemonicParsing="false" onAction="#getData" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #008080;" text="GET DATA" />
+               </buttons></ButtonBar>
+          <TextField fx:id="startDateInput" layoutX="14.0" layoutY="332.0" prefHeight="25.0" prefWidth="146.0" promptText="start date: YYYY-MM-DD" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="332.0" />
+          <TextField fx:id="endDateInput" layoutX="235.0" layoutY="333.0" prefHeight="25.0" prefWidth="146.0" promptText="end date: YYYY-MM-DD" AnchorPane.leftAnchor="235.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="333.0" />
+          <TextArea fx:id="textArea" layoutX="21.0" layoutY="14.0" prefHeight="298.0" prefWidth="399.0" style="-fx-background-color: #d3d3d3;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+            <Text fill="#403f3f" layoutX="167.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="max. 7 days" wrappingWidth="68.13671875">
+               <font>
+                  <Font name="Calibri Light" size="12.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>
