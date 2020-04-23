@@ -16,7 +16,7 @@ public class GUIApplication extends Application{
     public void start(Stage stage) throws IOException {
 
         FXMLLoader loader = new FXMLLoader();
-        URL url = getClass().getResource("/main.fxml");
+        URL url = getClass().getResource("/Table.fxml");
         loader.setLocation(url);
         Parent root = loader.load();
         stage.setScene(new Scene(root));

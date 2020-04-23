@@ -1,6 +1,5 @@
 package controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -8,7 +7,6 @@ import space.Asteroid;
 import space.NasaDataProvider;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class MainController {
 
