@@ -14,11 +14,11 @@ public class GUIApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader loader0 = new FXMLLoader();
-        URL url0 = getClass().getResource("/log.fxml");
-        loader0.setLocation(url0);
-        Parent root0 = loader0.load();
-        stage.setScene(new Scene(root0));
+        FXMLLoader loader = new FXMLLoader();
+        URL url = getClass().getResource("/log.fxml");
+        loader.setLocation(url);
+        Parent root = loader.load();
+        stage.setScene(new Scene(root));
         stage.show();
     }
 

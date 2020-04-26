@@ -27,8 +27,8 @@ public class MainControllerLog {
     private String pass = "password";
 
     public void verify(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         if (logText.getText().equals(log)&&passText.getText().equals(pass)){
+            Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             FXMLLoader loader = new FXMLLoader();
             URL url = getClass().getResource("/Table.fxml");
             loader.setLocation(url);
