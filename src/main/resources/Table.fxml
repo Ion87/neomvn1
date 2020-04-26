@@ -3,28 +3,40 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="456.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainControllerTable">
+<VBox prefHeight="456.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainControllerTable">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="456.0" prefWidth="454.0" VBox.vgrow="ALWAYS">
       <children>
             <ButtonBar layoutX="110.0" layoutY="416.0" prefHeight="40.0" prefWidth="203.0" />
-            <TextField fx:id="startDateInput" layoutX="14.0" layoutY="22.0" prefHeight="25.0" prefWidth="148.0" promptText="start date: YYYY-MM-DD" />
-            <TextField fx:id="endDateInput" layoutX="177.0" layoutY="22.0" prefHeight="25.0" prefWidth="148.0" promptText="end date: YYYY-MM-DD" />
-          <Button layoutX="348.0" layoutY="22.0" mnemonicParsing="false" onAction="#getData" prefHeight="25.0" prefWidth="89.0" text="GET DATA" />
+            <TextField fx:id="startDateInput" layoutX="5.0" layoutY="36.0" prefHeight="25.0" prefWidth="148.0" promptText="start date: YYYY-MM-DD" />
+            <TextField fx:id="endDateInput" layoutX="163.0" layoutY="36.0" prefHeight="25.0" prefWidth="148.0" promptText="end date: YYYY-MM-DD" />
+          <Button layoutX="324.0" layoutY="16.0" mnemonicParsing="false" onAction="#getData" prefHeight="40.0" prefWidth="73.0" style="-fx-background-color: #90EE90;" text="GET DATA" />
             <TableView fx:id="tableView" layoutX="7.0" layoutY="106.0" prefHeight="330.0" prefWidth="394.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="70.0">
               <columns>
-                <TableColumn fx:id="id" prefWidth="114.0" text="ID" />
-                <TableColumn fx:id="diameter" prefWidth="107.0" text="Diameter" />
-                  <TableColumn fx:id="distance" prefWidth="109.0" text="Distance" />
-                  <TableColumn fx:id="danger" prefWidth="110.0" text="Danger" />
+                <TableColumn fx:id="id" prefWidth="119.0" text="ID" />
+                <TableColumn fx:id="diameter" prefWidth="113.0" text="Diameter" />
+                  <TableColumn fx:id="distance" prefWidth="112.0" text="Distance" />
+                  <TableColumn fx:id="danger" prefWidth="118.0" text="Danger" />
               </columns>
             </TableView>
+            <Button onAction="#singOf" layoutX="408.0" layoutY="16.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="52.0" style="-fx-background-color: #FFA07A;" text="Sing-of">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="92.0" layoutY="16.0" text="interval of days max 7 days" textFill="#656464">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
       </children>
     </AnchorPane>
   </children>
